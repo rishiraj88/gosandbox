@@ -15,27 +15,33 @@ const showHints = false;
 func main(){
 	value1 := "10"
 	value2 := "5.5"
-	operation := "+"
-	fmt.Println(calculate(value1, value2, operation))
+	operation := "*"
+	result,status :=	calculate(value1, value2, operation)
+	fmt.Println(result)
+	if "" != status {
+		panic(status)
+	} 
 }
 // calculate() returns the result of the requested operation.
-func calculate(input1 string, input2 string, operation string) float64 {
+func calculate(input1 string, input2 string, operation string) (float64,string) {
 	val1 := convertInputToValue(input1)
 	val2 := convertInputToValue(input2)
 	
 	switch operation {
-		case "+": return addValues(val1,val2)
-		case "-": return subtractValues(val1,val2)
-		case "*": return multiplyValues(val1,val2)
-		case "/": return divideValues(val1,val2)
-		default: return -99-99990909
+		case "+": return addValues(val1,val2),""
+		case "-": return subtractValues(val1,val2),""
+		case "*": return multiplyValues(val1,val2),""
+		case "/": return divideValues(val1,val2),""
+		default: return -99-99990909,"invalid arguments"
 	}
 }
 
 func convertInputToValue(input string) float64 {
 	val,err := strconv.ParseFloat(input,64)
+	var errMsg string
 	if(nil != err) {
-		panic(err)
+		errMsg = fmt.Sprintf("Error while parsing an input. %v must be a number.",input)
+		panic(errMsg)
 	}
 	return val
 }
