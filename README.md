@@ -5,5 +5,5 @@
 - To add programs and code files to schowcase object-oriented features of Go.
 - To include REST API implementations.
 
-## Challenges (Short-Term Add-On Activities)
-- In progress: Setting VS Code and workspage in Ubuntu development box (Workstation).
+## Progress (Short-Term Add-On Activities)
+- Set VS Code and workspage in Ubuntu development box (Workstation) up.
