@@ -6,4 +6,4 @@
 - To include REST API implementations.
 
 ## Progress (Short-Term Add-On Activities)
-- Set VS Code and workspage in Ubuntu development box (Workstation) up.
+- Set VS Code and workspace up using a Ubuntu Workstation.
