@@ -1,4 +1,4 @@
-# Golang and REST APIs
+# Golang and Gin for implementing RESTful APIs
 - A dedicated repository of programs and apps in Golang (Go language).
 
 ## Activities in this Repo
