@@ -1,5 +1,3 @@
-// Write your answer here, and then test your code.
-
 package main
 
 import (
@@ -7,14 +5,9 @@ import (
 	"strconv"
 )
 
-// Change these boolean values to control whether you see
-// the expected answer and/or hints.
-const showExpectedResult = false
-const showHints = false
-
-func main() {
-	value1 := "20"
-	value2 := "23232.5"
+func main(){
+	value1 := "10"
+	value2 := "4.5"
 	operation := "*"
 	result, status := calculate(value1, value2, operation)
 	fmt.Println(result)
@@ -29,16 +22,11 @@ func calculate(input1 string, input2 string, operation string) (float64, string)
 	val2 := convertInputToValue(input2)
 
 	switch operation {
-	case "+":
-		return addValues(val1, val2), ""
-	case "-":
-		return subtractValues(val1, val2), ""
-	case "*":
-		return multiplyValues(val1, val2), ""
-	case "/":
-		return divideValues(val1, val2), ""
-	default:
-		return -99 - 99990909, "invalid arguments"
+		case "+": return add(val1,val2),""
+		case "-": return subtract(val1,val2),""
+		case "*": return multiply(val1,val2),""
+		case "/": return divide(val1,val2),""
+		default: return -99-99990909,"invalid arguments"
 	}
 }
 
@@ -52,19 +40,19 @@ func convertInputToValue(input string) float64 {
 	return val
 }
 
-func addValues(value1, value2 float64) float64 {
+func add(value1, value2 float64) float64 {
 
 	return value1 + value2
 }
 
-func subtractValues(value1, value2 float64) float64 {
+func subtract(value1, value2 float64) float64 {
 	return value1 - value2
 }
 
-func multiplyValues(value1, value2 float64) float64 {
+func multiply(value1, value2 float64) float64 {
 	return value1 * value2
 }
 
-func divideValues(value1, value2 float64) float64 {
+func divide(value1, value2 float64) float64 {
 	return value1 / value2
 }
