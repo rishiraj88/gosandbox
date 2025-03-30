@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// Change these boolean values to control whether you see
+// Switches to control whether you see
 // the expected answer and/or hints.
 const showExpectedResult = false;
 const showHints = false;
